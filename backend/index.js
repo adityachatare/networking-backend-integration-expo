@@ -1,7 +1,7 @@
 import express from "express";
-
 const app = express();
 
+app.use(cors({ origin: "*" }));
 app.get("/api/v1/hello", (req, res) => {
   return res.json({ data: "Hello world" }).status(200);
 });
